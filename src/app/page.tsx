@@ -1,55 +1,25 @@
-import { Account } from '../components/Account'
-import { Balance } from '../components/Balance'
-import { BlockNumber } from '../components/BlockNumber'
-import { Connect } from '../components/Connect'
-import { Connected } from '../components/Connected'
-import { NetworkSwitcher } from '../components/NetworkSwitcher'
+import { Connected } from '../components/Wallet/Connected'
 import { ReadContract } from '../components/ReadContract'
-import { ReadContracts } from '../components/ReadContracts'
-import { ReadContractsInfinite } from '../components/ReadContractsInfinite'
 import { SendTransaction } from '../components/SendTransaction'
 import { SendTransactionPrepared } from '../components/SendTransactionPrepared'
 import { SignMessage } from '../components/SignMessage'
 import { SignTypedData } from '../components/SignTypedData'
-import { Token } from '../components/Token'
-import { WatchContractEvents } from '../components/WatchContractEvents'
-import { WatchPendingTransactions } from '../components/WatchPendingTransactions'
 import { WriteContract } from '../components/WriteContract'
 import { WriteContractPrepared } from '../components/WriteContractPrepared'
+import { CreateBucket } from '../components/Buckets'
+import '../styles/globals.css'
+import { Header } from '../components/Header'
 
 export default function Page() {
   return (
     <div>
-      <h1>wagmi + Next.js</h1>
-      <Connect />
       <Connected>
-        <hr />
-        <h2>Network</h2>
-        <NetworkSwitcher />
-        <br />
-        <hr />
-        <h2>Account</h2>
-        <Account />
-        <br />
-        <hr />
-        <h2>Balance</h2>
-        <Balance />
-        <br />
-        <hr />
-        <h2>Block Number</h2>
-        <BlockNumber />
+        <Header />
+        <CreateBucket />
         <br />
         <hr />
         <h2>Read Contract</h2>
         <ReadContract />
-        <br />
-        <hr />
-        <h2>Read Contracts</h2>
-        <ReadContracts />
-        <br />
-        <hr />
-        <h2>Read Contracts Infinite</h2>
-        <ReadContractsInfinite />
         <br />
         <hr />
         <h2>Send Transaction</h2>
@@ -66,18 +36,6 @@ export default function Page() {
         <hr />
         <h2>Sign Typed Data</h2>
         <SignTypedData />
-        <br />
-        <hr />
-        <h2>Token</h2>
-        <Token />
-        <br />
-        <hr />
-        <h2>Watch Contract Events</h2>
-        <WatchContractEvents />
-        <br />
-        <hr />
-        <h2>Watch Pending Transactions</h2>
-        <WatchPendingTransactions />
         <br />
         <hr />
         <h2>Write Contract</h2>

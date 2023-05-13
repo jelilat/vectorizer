@@ -1,7 +1,9 @@
 import { Providers } from './providers'
 
 export const metadata = {
-  title: 'wagmi',
+  title: 'Vectorizer - Vector embedded greenfield storage',
+  description: 'Vector embedded greenfield storage',
+  image: '/vectorizer.png',
 }
 
 export default function RootLayout({
