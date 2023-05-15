@@ -1,8 +1,4 @@
 import { Chain, configureChains } from 'wagmi';
-import { mainnet } from 'wagmi/chains';
-import { InjectedConnector } from 'wagmi/connectors/injected';
-import { MetaMaskConnector } from 'wagmi/connectors/metaMask';
-import { publicProvider } from 'wagmi/providers/public';
 import * as env from './env';
 
 export const GRPC_URL = env.GRPC_URL;
