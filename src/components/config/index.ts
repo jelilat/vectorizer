@@ -1,11 +1,9 @@
-import { configureChains, createConfig, Chain } from 'wagmi'
-import { mainnet } from 'wagmi/chains'
-import { CoinbaseWalletConnector } from 'wagmi/connectors/coinbaseWallet'
-import { InjectedConnector } from 'wagmi/connectors/injected'
-import { MetaMaskConnector } from 'wagmi/connectors/metaMask'
-import * as env from './components/config'
-
-import { publicProvider } from 'wagmi/providers/public'
+import { Chain, configureChains } from 'wagmi';
+import { mainnet } from 'wagmi/chains';
+import { InjectedConnector } from 'wagmi/connectors/injected';
+import { MetaMaskConnector } from 'wagmi/connectors/metaMask';
+import { publicProvider } from 'wagmi/providers/public';
+import * as env from './env';
 
 export const GRPC_URL = env.GRPC_URL;
 export const GREENFIELD_RPC_URL = env.GREENFIELD_RPC_URL;
@@ -57,31 +55,11 @@ const bscChain: Chain = {
   // testnet: true,
 };
 
-const { chains, publicClient, webSocketPublicClient } = configureChains(
-  [mainnet, greenFieldChain, bscChain],
-  [
-    publicProvider(),
-  ],
-)
+// const { chains, provider, webSocketProvider } = configureChains(
+//   [mainnet, greenFieldChain, bscChain],
+//   [publicProvider()],
+// );
 
-export const config = createConfig({
-  autoConnect: true,
-  connectors: [
-    new MetaMaskConnector({ chains }),
-    new CoinbaseWalletConnector({
-      chains,
-      options: {
-        appName: 'wagmi',
-      },
-    }),
-    new InjectedConnector({
-      chains,
-      options: {
-        name: 'Injected',
-        shimDisconnect: true,
-      },
-    }),
-  ],
-  publicClient,
-  webSocketPublicClient,
-})
+// const metaMaskWalletConnector = new MetaMaskConnector({ chains });
+
+// export { provider, webSocketProvider, chains, metaMaskWalletConnector };

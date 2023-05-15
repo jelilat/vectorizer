@@ -1,0 +1,62 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .bucket {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .bucket:hover {
+    background-color: #ddd;
+  }
+  
+  .bucketName {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  .searchContainer {
+    /* display: flex; */
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .searchContainer input {
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 15px;
+  }
+
+    .searchContainer button {
+        padding: 10px;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .table th, .table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+  }
+  
