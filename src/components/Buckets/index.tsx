@@ -55,8 +55,7 @@ export const Bucket = () => {
 
     const handleSearch = async () => {
         const m = await matches(searchText, objects!)
-        let s = searchResults || []
-        setSearchResults([...s, m[0].file])
+        setSearchResults([m[0].file])
     }
 
     const getDate = (timestamp: string) => {
